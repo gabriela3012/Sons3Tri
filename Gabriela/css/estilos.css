@@ -1,0 +1,69 @@
+:root {
+  --cinza: #aaa;
+  --vermelha: #e93d50;
+  --vermelha-escura: #af303f;
+  --branca: #fff;
+  --luz: rgb(229, 255, 0);
+  --preto1: rgba(0, 0, 0, 0.664);
+  --preto2: black;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #ca65a9 0%,#6e064b 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--preta);
+  margin-bottom: 80px;
+  font-size: 8rem;
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #ca65a9 0%,#ca65a9 100%);
+  box-shadow: 6px 8px 0 6px #6e064b, 10px 10px 10px #fafafa;
+  border-radius: 20px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.tecla {
+  background-color: #6e064b;
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 #b975a2;
+  color: black;
+  cursor: pointer;
+  height: 170px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 170px;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: var(pink);
+  border: 4px solid  var(#b975a2);
+  box-shadow: 3px 3px 0 var(pink) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px white;
+}
+
+.tecla.ativa:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 white inset, 1px 1px 10px white;
+}
